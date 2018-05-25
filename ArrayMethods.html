@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<title>Array Methods</title>
+	<head>
+		<script type="text/javascript">
+			function ArrayMethods(){
+				var fruits=["Apple","Grapes","Banana"];//creates an array
+				console.log(fruits.length);//displays length of the array
+				console.log(fruits[2]);//displays the array element of index 2
+				console.log(fruits[4]);//array length is only 3 so it displays undefined
+				// //delete fruits[0];//deletes the 0th index element in the array
+				console.log(fruits);//displays the fruits array elements
+				fruits.forEach(function(ele){
+					console.log(ele);
+				});//foreach loop for every element in the array
+				// //console.log(fruits.pop());//delete the element end of the array
+				fruits.push("lemons");//add the element end of the array				
+				fruits[fruits.length]="oranges";//add the element end of the array by 								   	using lenth of the array
+				console.log(fruits);//displays the fruits array after adding lemons and 						oranges
+				console.log(fruits.toString());//converts all the array elements into 									string data type.
+				document.getElementById("join").innerHTML=fruits.join(" * ");//all array diplays with * in between the elements.
+				//console.log(fruits.shift());//delete the element at the 0th index or starting of the array
+				fruits.unshift("Mangoes");// add the element 0th index or starting of 								the array
+				console.log(fruits);
+
+				fruits.splice(1,1,"Aaa","bbb");//splice can alter the array Aaa,bbb will 								replace in index of 1st position
+				console.log(fruits);
+				var slicearray=fruits.slice(5);//delets the 1st 5 elements of array
+				console.log(slicearray);//displays the slice array after slice
+				console.log(fruits.reverse());//displays reverse of array
+				console.log(fruits.sort());//sort the arry. This works onlky for strings
+
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<button onclick="ArrayMethods()">ArrayMethods</button>
+		<p id="join"></p>
+	</body>
+</html>
