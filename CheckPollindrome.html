@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+	<title>Pollindrome</title>
+	<head>
+		<script type="text/javascript">
+			function reverseString() {
+            var s = document.getElementById('inputstring').value;
+            var reversed= s.split('').reverse().join('');
+            
+            // for (var i = s.length - 1; i >= 0; i--) {
+            //     reversed += s[i];
+            // }
+
+            document.getElementById('inputstring').disabled = true;
+            document.getElementById('inputstring').value = reversed;
+            console.log(reversed);
+       
+            }
+            function RevString() {
+            reverseString();
+        	}
+
+        	function pollindrome(){
+
+        		var str= document.getElementById('inputstring').value;;
+			    if (str == str.split('').reverse().join('')) {
+			        alert(str + ' is palindrome.');
+			    }
+			    else {
+			        alert(str + ' is not palindrome.');
+			    }
+
+        		//console.log("murali");
+
+        	}
+        	function isPollindrome(){
+        		pollindrome();
+        	}
+        </script>
+	</head>
+	<body>
+		
+			<input type="text" id="inputstring">
+			<button onclick="isPollindrome()">Check Pollindrome</button>
+			<button onclick="RevString()">Rev String</button>
+		
+	</body>
+</html>
