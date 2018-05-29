@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<head>
+		<title>JSON Array Sort</title>
+		<script>
+			
+			function SortByName(){
+				
+				var data=[{"name":"murali",age:27,"city":"NYC"},{"name":"Krishna",age:30,"city":"LA"},{"name":"Uppula",age:20,"city":"DE"}];
+				//var myJson=JSON.stringify(data);
+				//console.log(myJson);
+				data.sort(function (a, b) {
+					    return a.name.localeCompare(b.name);
+					});
+				document.write(JSON.stringify(data));	
+			}
+
+			function SortByCity(){
+				var data=[{"name":"murali",age:27,"city":"NYC"},{"name":"Krishna",age:30,"city":"LA"},{"name":"Uppula",age:20,"city":"DE"}];
+				data.sort(function (a, b) {
+					    return a.city.localeCompare(b.city);
+					});
+				document.write(JSON.stringify(data));
+			}
+
+			function SortByAge(){
+				var data=[{"name":"murali",age:27,"city":"NYC"},{"name":"Krishna",age:30,"city":"LA"},{"name":"Uppula",age:20,"city":"DE"}];
+				data.sort(function (a, b) {
+					    return a.age>b.age;//ascending order
+					    //return a.age<b.age;//descending order
+					});
+				document.write(JSON.stringify(data));
+			}
+			
+		</script>
+	</head>
+	<body>
+		<button onclick="SortByName()">SortByName</button>
+		<button onclick="SortByAge()">SortByAge</button>
+		<button onclick="SortByCity()">SortByCity</button>
+	</body>
+</html>
