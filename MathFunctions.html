@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<title>Math Functions</title>
+	<head>
+		<script>
+			function MathFunctions(){
+				console.log(Math.PI);//displays PI Value
+				console.log(Math.round(4.8));//displays next round integer value
+				console.log(Math.abs(-4.8));//displays the possitive value
+				console.log(Math.ceil(4.8));//displays the up side next value
+				console.log(Math.floor(4.8));//displays down side before value
+				console.log(Math.pow(5,2));//displays the value 5 power 2=25
+				console.log(Math.sqrt(100));//displays the value square root of 100=10
+			}
+			function power(){
+				var firstnumber=document.getElementById("num").value;
+				var secondnumber=prompt('enter the secondnumber','');
+				document.getElementById("result").innerHTML=Math.pow(firstnumber,secondnumber);
+
+			}
+
+			function sqrt(){
+				var number=document.getElementById("num").value;
+				document.getElementById("result").innerHTML=Math.sqrt(number);
+
+			}
+
+		</script>
+	</head>
+	<body>
+		<button Onclick="MathFunctions()">MathFunctions</button><br/>
+		<input type="text" id="num">
+		<p id="result"></p>
+		<button onclick="power()">Power</button>
+		<button onclick="sqrt()">Sqrt</button>
+	</body>
+</html>
