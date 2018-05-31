@@ -4,27 +4,33 @@
 	<head>
 		<script type="text/javascript">
 			function add(str){
-				var input=document.getElementById("num").value;
+				var input=document.getElementById('num').value;
 				document.getElementById('num').value=input+str;
 			}
+			function result(){
+	             var input=document.getElementById('num').value;
+	             console.log(input);
+	             var values=input.split('pow');
+	             document.getElementById('num').value = Math.pow(values[0],values[1]);
+        	}
 		</script>		
 	</head>
 	<body>
 		<form>
 			<input type="text" name="num"><br/>
-			<button onclick="add(1)">1</button>
-			<button onclick="add(2)">2</button>
-			<button onclick="add(3)">3</button>
-			<button onclick="add(4)">4</button><br/>
-			<button onclick="add(5)">5</button>
-			<button onclick="add(6)">6</button>
-			<button onclick="add(7)">7</button>
-			<button onclick="add(8)">8</button><br/>
-			<button onclick="add(9)">9</button>
-			<button onclick="add(0)">0</button>
-			<button onclick="add(pow)">Pow</button>
-			<button onclick="add(sqrt)">sqrt</button><br/>
-			<button onclick="add(result)">Result</button>
+			<button onclick="add('1')">1</button>
+			<button onclick="add('2')">2</button>
+			<button onclick="add('3')">3</button>
+			<button onclick="add('4')">4</button><br/>
+			<button onclick="add('5')">5</button>
+			<button onclick="add('6')">6</button>
+			<button onclick="add('7')">7</button>
+			<button onclick="add('8')">8</button><br/>
+			<button onclick="add('9')">9</button>
+			<button onclick="add('0')">0</button>
+			<button onclick="add('pow')">Pow</button>
+			<button onclick="add('sqrt')">sqrt</button><br/>
+			<button onclick="result()">Result</button>
 		</form>
 	</body>
 </html>
