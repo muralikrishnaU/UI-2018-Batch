@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html>
-	<title>Calculator</title>
-	<head>
-		<script type="text/javascript">
-			function add(str){
-				var input=document.getElementById('num').value;
-				document.getElementById('num').value=input+str;
-			}
-			function result(){
-	             var input=document.getElementById('num').value;
-	             console.log(input);
-	             var values=input.split('pow');
-	             document.getElementById('num').value = Math.pow(values[0],values[1]);
-        	}
-		</script>		
-	</head>
-	<body>
-		<form>
-			<input type="text" name="num"><br/>
-			<button onclick="add('1')">1</button>
-			<button onclick="add('2')">2</button>
-			<button onclick="add('3')">3</button>
-			<button onclick="add('4')">4</button><br/>
-			<button onclick="add('5')">5</button>
-			<button onclick="add('6')">6</button>
-			<button onclick="add('7')">7</button>
-			<button onclick="add('8')">8</button><br/>
-			<button onclick="add('9')">9</button>
-			<button onclick="add('0')">0</button>
-			<button onclick="add('pow')">Pow</button>
-			<button onclick="add('sqrt')">sqrt</button><br/>
-			<button onclick="result()">Result</button>
-		</form>
-	</body>
+    <head>
+
+    </head>
+    <body>
+        <table border="1px solid">
+            <tr>
+                <td><input type="text" id="num"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="add('1')">1</button>
+                    <button onclick="add('2')">2</button>
+                    <button onclick="add('3')">3</button>
+                    <button onclick="add('plus')">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="add('4')">4</button>
+                    <button onclick="add('5')">5</button>
+                    <button onclick="add('6')">6</button>
+                    <button onclick="add('minus')">-</button>
+                </td>
+            <tr>
+                <td>
+                    <button onclick="add('7')">7</button>
+                    <button onclick="add('8')">8</button>
+                    <button onclick="add('9')">9</button>
+                    <button onclick="add('multiply')">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="add('pow')">power</button>
+                    <button onclick="result()">result</button>
+                    <button onclick="sqrtresult()">sqrt</button>
+                </td>
+            </tr>
+            <!--<button onclick="power()">Power</button>
+            <button onclick="sqrt()">Squareroot</button>-->
+            <p id="result"></p>
+
+        </table>
+        <script>
+                function add(str){
+                    var input=document.getElementById('num').value;
+                    document.getElementById('num').value = input+str;
+                }
+                function result(){
+                    var input=document.getElementById('num').value;
+                    console.log(input);
+                    var values=input.split('pow');
+                    document.getElementById('num').value = Math.pow(values[0],values[1]);
+                }
+                function sqrtresult(){
+                    var input=document.getElementById('num').value;
+                    console.log(input);
+                    var values1=input.split('Squareroot');
+                    document.getElementById('num').value=Math.sqrt(values1);
+                }
+            </script>
+    </body>
 </html>
