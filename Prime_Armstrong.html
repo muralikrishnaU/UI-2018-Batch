@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function isPrime(input){
+				var input= document.getElementById('num').value;
+				var c=0;  
+				for(var i=2;i<input;i++){  
+					if(input%i==0){  
+				    	c=i;  
+				    	//alert("Now C IS:"+c);  
+				   	}  
+				}  
+				if(c==0)  
+				{  
+				   alert(input+ " is prime");  
+				}  
+				else  
+				{  
+				   alert(input+ "is not a prime");  
+				}  
+			}
+
+			function isArmstrong(input){
+				var arm=0,a;
+				var input=Number(document.getElementById('num').value);
+				temp=input;
+				while(temp>0){
+					a=temp%10;
+					temp=parseInt(temp/10); // convert float into Integer
+					arm=arm+a*a*a;
+				}
+				if(arm==input){
+					alert(input+ "is Armstrong number");
+				}
+				else{
+					alert(input+ " is Not Armstrong number");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="num">
+		<button onclick="isPrime()">Check Prime</button>
+		<button onclick="isArmstrong()">Check Armstrong</button>
+	</body>
+</html>
