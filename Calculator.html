@@ -13,7 +13,7 @@
                     <button onclick="add('1')">1</button>
                     <button onclick="add('2')">2</button>
                     <button onclick="add('3')">3</button>
-                    <button onclick="add('plus')">+</button>
+                    <button onclick="addition()">+</button>
                 </td>
             </tr>
             <tr>
@@ -59,6 +59,12 @@
                     console.log(input);
                     var values1=input.split('Squareroot');
                     document.getElementById('num').value=Math.sqrt(values1);
+                }
+                function addition(){
+                    var input=document.getElementById('num').value;
+                    console.log(input);
+                    var values=input.split('plus');
+                    document.getElementById('num').value=Math.add(values[1],values[2]);
                 }
             </script>
     </body>

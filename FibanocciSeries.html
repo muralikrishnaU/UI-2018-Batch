@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function fibonacci(){
+				var count=document.getElementById('inputCount').value;
+				output="The first " +count+ " elements in the Fibanocci Series: ";
+				var a=0, b=1, sum=0;
+				for(var i=0;i<count;i++){
+					output+=a+"  ";
+					sum=a+b;
+					a=b;
+					b=sum;	
+				}
+			    document.getElementById("fSeries").innerHTML=output;
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="inputCount"/>
+		<button onclick="fibonacci()">GetFibanocciNumbers</button>
+		<p id="fSeries"></p>
+	</body>
+</html>
