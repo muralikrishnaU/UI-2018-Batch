@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var emp={
+						address:{
+							name:"DE",
+							user:{
+								name:"Murali",
+								getdetails:function(){
+									return this.name;
+								},
+							city:{
+								name:"mythri",
+								getdetails:function(){
+									return this.name;
+									}
+								}
+							}
+						}
+					}
+			console.log(emp.address.user.getdetails());
+		</script>
+	</body>
+</html>
